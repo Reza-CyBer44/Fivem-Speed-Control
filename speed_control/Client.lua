@@ -28,7 +28,7 @@ Citizen.CreateThread(function()
 	if NeedToChange then
           SetEntityMaxSpeed(GetVehiclePedIsIn(PlayerPedId(),false),MaxSpeed)
 	  ChangedRecently = true
-        elseif NeedToChange and ChangedRecently then
+        elseif NeedToChange and ChangedRecently then -- Sending Notification Only Once!
         notifyenter(MaxSpeed)
 	elseif ChangedRecently then  -- Only Changing The Max Speed When its Needed To Not Interfere With Other Max Speed Limitation Scripts
 	  ChangedRecently = false
